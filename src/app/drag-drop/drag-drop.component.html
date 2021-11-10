@@ -1,0 +1,92 @@
+<!-- <div class="container">
+    <div class="row">
+        <table class="table" clrDroppable (clrDrop)="onDropBack($event)">
+        <thead>
+        <tr>
+            <th>Files:</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngIf="files.length===0">
+            <td>Nothing to drag here...</td>
+        </tr>
+        <tr *ngFor="let file of files">
+            <td><span class="label" [clrDraggable]="file">{{file.name}}</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <table class="table" clrDroppable (clrDrop)="onDropToUpload($event)">
+            <thead>
+            <tr>
+                <th>Files:</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngIf="droppedFiles.length===0">
+                <td>Nothing to drag here...</td>
+            </tr>
+            <tr *ngFor="let file of droppedFiles">
+                <td><span class="label" [clrDraggable]="file">{{file.name}}</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div> -->
+
+
+<!-- <div class="container">
+    <div mwlDraggable (dragEnd)="dragEnd($event)">Drag me!</div>
+    <div mwlDroppable (drop)="this.droppedData = $event.dropData">
+      <span [hidden]="droppedData">Drop here</span>
+      <span [hidden]="!droppedData">Item dropped here with data: "{{ droppedData }}"!</span>
+    </div>
+
+</div> -->
+
+<app-layout-dashboard>
+<div class="container">
+    <div id="div1" (drop)="drop($event)" (dragover)="allowDrop($event)">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" draggable="true" (dragstart)="drag($event)"
+        id="drag1"
+        width="80"
+        height="30">
+       <!-- <table draggable="true" (dragstart)="drag($event)"
+        id="drag1" class="table"> 
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Age</th> 
+            </tr>
+            <tr>
+                <td>Test</td>
+                <td>test@dsd.com</td>
+                <td>Ab</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Test2</td>
+                <td>test2@dsd.com</td>
+                <td>sd</td>
+                <td>34</td>
+            </tr>
+        </table> -->
+    </div>
+
+    <div id = "div2" (drop) = "drop($event)" (dragover) = "allowDrop($event)">
+
+       <!---- <table class="table">
+            <tr>
+            <th>Name</th>
+            <th>Size</th>
+            </tr>
+            <tr *ngFor = "let i of image">
+                <td>{{img.name}}</td>
+                <td>{{img.size}}</td>
+            </tr>
+        </table> -->
+    </div>
+</div>
+</app-layout-dashboard>

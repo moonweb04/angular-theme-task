@@ -1,0 +1,13 @@
+<app-layout-dashboard>
+<div class="py-4">
+<div class="card col-md-7 m-auto">
+    <div class="card-body">
+        <ul *ngFor="let d of dataGet">
+            <li>{{d.title}}</li>
+        </ul>
+
+        <button class="btn btn-primary" (click)="showData()">Click</button>
+    </div>
+</div>
+</div>
+</app-layout-dashboard>

@@ -1,0 +1,36 @@
+/* .small-box .icon {
+    color: rgba(0,0,0,.15);
+    z-index: 0;
+}
+
+.ion-bag:before {
+    content: "\f110";
+}
+
+.small-box .icon>i.fa, .small-box .icon>i.fab, .small-box .icon>i.fad, .small-box .icon>i.fal, .small-box .icon>i.far, .small-box .icon>i.fas, .small-box .icon>i.ion {
+    font-size: 70px;
+    top: 20px;
+}
+.small-box .icon>i {
+    font-size: 90px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: -webkit-transform .3s linear;
+    transition: transform .3s linear;
+    transition: transform .3s linear,-webkit-transform .3s linear;
+}
+
+
+
+.ion-stats-bars:before {
+    content: "\f2b5";
+}
+
+.ion-person-add:before {
+    content: "\f211";
+}
+
+.ion-pie-graph:before {
+    content: "\f2a5";
+} */

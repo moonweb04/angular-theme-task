@@ -1,0 +1,28 @@
+<app-layout-dashboard>
+    <div class="container">
+      <div class="login-logo">
+          <b>User</b> Listing
+       </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Gender</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let u of users">
+            <td>{{u.name | userName:u.gender}}</td>
+            <td>{{u.address}}</td>
+            <td>{{u.city}}</td>
+            <td>{{u.gender}}</td>
+            <td>{{u.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </app-layout-dashboard>
+  

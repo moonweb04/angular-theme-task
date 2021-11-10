@@ -21,12 +21,19 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/assets/plugins/",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+            
+              "src/styles.css",
+              "src/assets/fontawesome-free/css/all.min.css",
+              "src/assets/icheck-bootstrap/icheck-bootstrap.min.css",
+              "src/assets/adminlte.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/adminlte.min.js"
+            ]
           },
           "configurations": {
             "production": {

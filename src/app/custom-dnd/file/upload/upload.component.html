@@ -1,0 +1,28 @@
+    <div class="row card">
+
+	<div class="col-md-5 my-4">
+		
+		<input type="file" #fileInput multiple (change)="addToQueue()" />
+	</div>
+
+     
+	<div class="col-md-7 my-4">
+		
+		<table class=" table table-headed table-striped">
+			<thead>
+				<tr>
+					<th class="text-left">Name</th>
+					<th class="text-right">Size</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of queue | async">
+					<td>{{ item?.file?.name }}</td>
+					<td class="text-right">{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+				</tr>
+			</tbody>
+		</table>
+	
+	</div>
+
+</div>

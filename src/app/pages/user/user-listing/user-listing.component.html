@@ -1,0 +1,38 @@
+<app-layout-dashboard>
+  <div class="container">
+    <div class="login-logo">
+        <b>User</b> Listing
+     </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Email</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let u of users">
+          <td>{{u.name}}</td>
+          <td>{{u.address}}</td>
+          <td>{{u.city}}</td>
+          <td>{{u.email}}</td>
+          <td><i class="fas fa-edit"></i></td>
+          <td><i class="fas fa-trash"></i></td>
+        </tr>
+        
+         <!-- <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>abc</td>
+          <td>july@example.com</td>
+          <td><i class="fas fa-edit"></i></td>
+          <td><i class="fas fa-trash"></i></td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+</app-layout-dashboard>

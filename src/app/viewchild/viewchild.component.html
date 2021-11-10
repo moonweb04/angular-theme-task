@@ -1,0 +1,21 @@
+<app-layout-dashboard>
+<div class="container py-4">
+    <div class="card bg-dark">
+        <div class="card-body">
+            <div #sec>
+                <h4>User name is <span class="text-success">{{username}}</span> (This is eg. for change element by ViewChild) </h4>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <button class="btn btn-primary" (click)="changeChildProperty()">Change Child Property</button>
+                    <br><br>
+                    <button class="btn btn-primary" (click)="callChildMethod()">Call Child Method</button>
+                </div>
+                <div class="col-md-6 shadow p-3 mb-5 bg-white rounded my-2">
+                    <app-comp1></app-comp1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</app-layout-dashboard>

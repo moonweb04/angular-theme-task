@@ -1,0 +1,29 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Test",
+      "price": 23
+    },
+    {
+      "id": 2,
+      "name": "Test 2",
+      "price": 26
+    },
+    {
+      "name": "Tv hjh",
+      "price": 4500,
+      "id": 4
+    },
+    {
+      "name": "Pc",
+      "price": 23000,
+      "id": 5
+    },
+    {
+      "name": "Car",
+      "price": 400000,
+      "id": 6
+    }
+  ]
+}

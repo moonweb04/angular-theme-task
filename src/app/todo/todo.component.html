@@ -1,0 +1,27 @@
+<app-layout-dashboard>
+    <div class="container col-md-4 py-4">
+    <div class="card bg-secondary">
+      <div class="card-body">
+        <div class="sections">
+          <div class="edit-popup" *ngIf="show">
+            <input type="text" name="" class="edit-item" value="{{value}}" #item>
+            <button class="btn-update btn btn-primary m-2" (click)="update(item.value)">Update</button>
+          </div>
+  
+          <input type="text" name="" class="item" #item>
+          <button class="btn-add-item btn btn-primary m-2" (click)="create(item.value)">Add</button>
+          <br><br>
+  
+          <ol>
+            <li *ngFor="let item of mockData">
+              <span [ngClass]="{'done': item.done}">{{item.title}}</span>
+              <button (click)="edit(item.id, item.title)" class="btn btn-warning btn-sm m-2">Edit</button>
+              <button (click)="remove(item.id)" class="btn btn-danger btn-sm">Delete</button>
+              <!-- <button (click)="setTaskComplete(item.id)" class="btn">Complete</button> -->
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-layout-dashboard>

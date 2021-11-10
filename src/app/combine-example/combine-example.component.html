@@ -1,0 +1,51 @@
+<app-layout-dashboard>
+<div class="container">
+    <h2 class="text-center">Main</h2>
+        <br><br>
+    <div class="row"> 
+        <div class="col-md-6">
+            <h4>India</h4>
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Delete</th>
+                </tr>
+                <tr *ngFor="let u of indian; index as i">
+                    <td>{{u}}</td>
+                    <td><button class="btn btn-danger" (click)="onRemoveIndians(i)">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h4>America</h4>
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Delete</th>
+                </tr>
+                <tr *ngFor="let u of american; index as i">
+                    <td>{{u}}</td>
+                    <td><button class="btn btn-danger" (click)="onRemoveAmericans(i)">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<hr class="style4">
+<br>
+
+<div class="container">
+    <h2 class="text-center">Sub</h2>
+        <br><br>
+    <div class="row">
+        <div class="col-md-6">
+            <app-child-eg [secColor]="'red'" [text]="'Enter Indian'" (inputEvent)="pushIndians($event)"></app-child-eg>
+        </div>
+<div class="col-md-6">
+    <app-child-eg [secColor]="'green'" [text]="'Enter American'" (inputEvent)="pushAmericans($event)"></app-child-eg>
+</div>
+          
+    </div>
+</div>
+</app-layout-dashboard>

@@ -1,0 +1,33 @@
+<app-layout-dashboard>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <input type="text" name="" class="form-control" placeholder="Enter Product" #productname>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary" (click)="addProduct(productname)">Add</button>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-5">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let u of product; index as i">
+                    <td>{{u.name}}</td>
+                    <td><button class="btn btn-danger" (click)="removeProduct(i)">Remove</button></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+</app-layout-dashboard>

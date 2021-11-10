@@ -1,0 +1,31 @@
+<app-layout-dashboard>
+    <div class="container py-4">
+        <div class="card">
+            <div class="card-header"><h2 class="text-center text-dark">CALCULATOR</h2></div>
+            <div class="card-body">
+                <div class="form-group">
+                    <!-- <label for="usr">Name:</label> -->
+                    <input [(ngModel)]="num1" type="number" class="form-control custom-input m-auto" id="usr" placeholder="Enter Number">
+                  </div>
+                  <div class="form-group">
+                    <!-- <label for="pwd">Password:</label> -->
+                    <input [(ngModel)]="num2" type="number" class="form-control custom-input m-auto" id="usr" placeholder="Enter Number">
+                  </div>
+
+                  <div class="row">
+                    <button class="btn btn-primary custom-btn" (click)="additionNum()">+</button>
+                    <button class="btn btn-danger custom-btn" (click)="subtractionNum()">-</button>
+                    <button class="btn btn-warning text-white custom-btn" (click)="multiplicationNum()">×</button>
+                    <button class="btn btn-dark custom-btn" (click)="divisionNum()">÷</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                <!-- <button class="btn btn-primary custom-btn">+</button>
+                <button class="btn btn-danger custom-btn">-</button>
+                <button class="btn btn-warning text-white custom-btn">×</button>
+                <button class="btn btn-dark custom-btn">÷</button> -->
+                <h4 class="text-center">The Answer of {{num1}} and {{num2}} = {{result}}</h4>
+            </div>
+        </div>
+    </div>
+</app-layout-dashboard>

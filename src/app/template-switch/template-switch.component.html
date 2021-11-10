@@ -1,0 +1,33 @@
+<app-layout-dashboard>
+   <div class="p-3 card m-auto"> 
+<!-- <input type = "radio" name = "movement" (click)="myMov='top'">Top
+<input type="radio" name="movement" (click)="myMov='bottom'">Bottom
+<input type="radio" name="movement" (click)="myMov='left'">Left
+<input type="radio" name="movement" (click)="myMov='right'">Right
+
+<br>
+
+<div [ngSwitch]="myMov" style="color:orange" class="text-warn">
+<ng-template [ng-SwitchCase]="'top'">Go to Top</ng-template>
+<ng-template [ng-SwitchCase]="'bottom'">Go to Bottom</ng-template>
+<ng-template [ng-SwitchCase]="'left'">Go to Left</ng-template>
+<ng-template [ng-SwitchCase]="'right'">Go to Right</ng-template>
+<ng-template ng-SwitchDefault>No Movement</ng-template>
+</div> --> 
+
+<div class="card-body col-md-4">
+<input type="radio" name="direction" (click)="myDir='east'">East
+<input type="radio" name="direction" (click)="myDir='west'">West
+<input type="radio" name="direction" (click)="myDir='north'">North
+<input type="radio" name="direction" (click)="myDir='south'">South
+<br/><br/>
+<div [ngSwitch]="myDir" style="color:orange">
+  <ng-template [ngSwitchCase]= "'east'"> Go to East Direction </ng-template>
+  <ng-template [ngSwitchCase]= "'west'"> Go to West Direction </ng-template>
+  <ng-template [ngSwitchCase]= "'north'"> Go to North Direction </ng-template>
+  <ng-template [ngSwitchCase]= "'south'">Go to South Direction </ng-template>
+  <ng-template ngSwitchDefault> No Direction </ng-template>
+</div>
+</div>
+</div>
+</app-layout-dashboard>

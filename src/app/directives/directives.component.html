@@ -1,0 +1,92 @@
+<app-layout-dashboard>
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- <ul class="custom-ul">
+                          <li [class.active]="viewTab == 'list'">
+                            <button class="btn btn-primary" (click)="viewTab='list'"><a>List of Games</a></button>
+                          </li>
+                          <li [class.active]="viewTab == 'favorites'">
+                            <button class="btn btn-primary" (click)="viewTab='favorites'"><a>Favorites</a></button>
+                          </li>
+                        </ul> -->
+                        
+                        <div class="m-auto d-table">
+                        <button class="btn btn-primary cust-btn" [class.active]="viewTab == 'list'" (click)="viewTab='list'"><a>List of Games</a></button>
+                        <button class="btn btn-primary cust-btn" [class.active]="viewTab == 'favorites'" (click)="viewTab='favorites'"><a>Favorites</a></button>
+                        </div>
+                    
+                        <div [ngSwitch]="viewTab">
+                          <div *ngSwitchCase="'list'">
+                            <h3 class="text-center">Games</h3>
+                            <table class="table m-auto text-center">
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                </tr>
+                            <tr *ngFor="let g of games; index as i; even as isEven" [class.even]="isEven">
+                              <td> {{i}}</td>
+                              <td> {{g.title}}</td>
+                              <td> {{g.description}}</td>
+                            </tr>
+                            </table>
+                          </div>
+                          <div *ngSwitchCase="'favorites'">
+                            <h3 class="text-center">Favorites</h3>
+                        
+                            <table class="table m-auto text-center">
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                </tr>
+                            <tr *ngFor="let g of favs; index as i; even as isEven" [class.even]="isEven">
+                              <td> {{i}}</td>
+                              <td> {{g.title}}</td>
+                              <td> {{g.description}}</td>
+                            </tr>
+                            </table>
+                        
+                          </div>
+                        
+                          <div *ngSwitchDefault>
+                            <h3 class="text-center">Other Games</h3>
+                            <table class="table m-auto text-center">
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>COD</td>
+                                    <td>Survivor</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>GTA</td>
+                                    <td>Open World</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Quake</td>
+                                    <td>Survivor</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Chess</td>
+                                    <td>Mind</td>
+                                </tr>
+                            </table>
+                          </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-layout-dashboard>

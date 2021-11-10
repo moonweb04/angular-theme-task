@@ -1,0 +1,5 @@
+.login-box, .register-page{
+    width: 360px;
+    margin: auto !important;
+    padding-top: 15px;
+  }

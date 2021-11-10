@@ -1,0 +1,33 @@
+<app-layout-dashboard>
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card bg-secondary shadow">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="search"></label>
+                            <input type="email" class="form-control" id="search" aria-describedby="emailHelp"
+                                placeholder="Search Product By Name" [(ngModel)]="productSearch">
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Prdouct Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let p of product | filter:productSearch">
+                                    <td>{{p.id}}</td>
+                                    <td>{{p.productName}}</td>
+                                    <td>{{p.price}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+</app-layout-dashboard>

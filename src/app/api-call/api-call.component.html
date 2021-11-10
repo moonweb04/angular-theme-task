@@ -1,0 +1,31 @@
+<app-layout-dashboard>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <!-- <th>Address</th> -->
+        <th>Phone</th>
+        <th>Website</th>
+        <!-- <th>Company</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let u of apiData">
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.username}}</td>
+        <td>{{u.email}}</td>
+        <!-- <td>{{u.address}}</td> -->
+        <td>{{u.phone}}</td>
+        <td>{{u.website}}</td>
+        <!-- <td>{{u.company}}</td> -->
+      </tr>
+    
+    </tbody>
+  </table>
+
+</app-layout-dashboard>

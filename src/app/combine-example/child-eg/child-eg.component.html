@@ -1,0 +1,9 @@
+<div class="box" [ngClass]="{secGreen:secColor=='green',secRed:secColor=='red'}">
+    <div class="row">
+
+<input type="text" placeholder="{{text}}" #customTemp>
+<button class="btn btn-primary" (click)="addPerson(customTemp)">Add</button>
+<br><br>
+<div *ngIf="count">Total Person:{{count}}</div>
+        </div>
+</div>

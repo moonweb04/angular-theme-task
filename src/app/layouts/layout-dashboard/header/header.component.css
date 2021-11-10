@@ -1,0 +1,25 @@
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+/* .fab{
+    
+    
+} */
+.fa-facebook{
+    background-color: #fff;
+    color: #3B5998;
+    border-radius: 24px;
+    font-size: 30px;
+    margin: 4px 8px;
+}
+
+.fa-google{
+    background-color: #fff;
+    color: #db5a3c;
+    border-radius: 24px;
+    font-size: 30px;
+    margin: 4px 8px;
+}
